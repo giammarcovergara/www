@@ -1,0 +1,35 @@
+{
+  "name": "Babylon-Grid",
+  "homepage": "https://github.com/turboMaCk/Babylon-Grid",
+  "authors": [
+    "Marek Fajkus <marek.faj@gmail.com>"
+  ],
+  "description": "Lightweight jQuery + CSS plugin for creating responsive, dynamic & customizable pinterest like grid with diferent column width support and vertical-align option.",
+  "main": "dist/jquery.babylongrid.js",
+  "keywords": [
+    "grid",
+    "pinterest",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo"
+  ],
+  "dependencies": {
+    "jquery": ">1.9.0"
+  },
+  "_release": "6c913c3bb9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6c913c3bb9968d655d296a4e1fc23956bf772096"
+  },
+  "_source": "https://github.com/turboMaCk/Babylon-Grid.git",
+  "_target": "*",
+  "_originalSource": "babylon-grid"
+}

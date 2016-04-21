@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'icons-rogervivier';
+    src:    url('fonts/icons-rogervivier.eot?6z9abi');
+    src:    url('fonts/icons-rogervivier.eot?6z9abi#iefix') format('embedded-opentype'),
+        url('fonts/icons-rogervivier.ttf?6z9abi') format('truetype'),
+        url('fonts/icons-rogervivier.woff?6z9abi') format('woff'),
+        url('fonts/icons-rogervivier.svg?6z9abi#icons-rogervivier') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons-rogervivier' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-quotes-left:before {
+    content: "\e932";
+}
+.icon-eye:before {
+    content: "\e931";
+}
+.icon-database:before {
+    content: "\e92f";
+}
+.icon-save:before {
+    content: "\e930";
+}
+.icon-cog:before {
+    content: "\e92e";
+}
+.icon-bubble:before {
+    content: "\e929";
+}
+.icon-alert:before {
+    content: "\e92a";
+}
+.icon-delete2:before {
+    content: "\e92b";
+}
+.icon-mail:before {
+    content: "\e92c";
+}
+.icon-orders:before {
+    content: "\e92d";
+}
+.icon-rogervivier-paris:before {
+    content: "\e927";
+}
+.icon-googleplus:before {
+    content: "\e90d";
+}
+.icon-toolfreenumber:before {
+    content: "\e91f";
+}
+.icon-contactus:before {
+    content: "\e906";
+}
+.icon-myprofile:before {
+    content: "\e915";
+}
+.icon-ordersummary:before {
+    content: "\e916";
+}
+.icon-search:before {
+    content: "\e91c";
+}
+.icon-wishlist:before {
+    content: "\e922";
+}
+.icon-arrow:before {
+    content: "\e902";
+}
+.icon-arrow-left:before {
+    content: "\e924";
+}
+.icon-arrow-right:before {
+    content: "\e925";
+}
+.icon-arrow-top:before {
+    content: "\e926";
+}
+.icon-delivery:before {
+    content: "\e908";
+}
+.icon-rightofwithdrawal:before {
+    content: "\e91b";
+}
+.icon-address:before {
+    content: "\e900";
+}
+.icon-arrowtoleft:before {
+    content: "\e928";
+}
+.icon-arrowtoright:before {
+    content: "\e901";
+}
+.icon-bookacallback:before {
+    content: "\e903";
+}
+.icon-chatwithassistant:before {
+    content: "\e904";
+}
+.icon-closedicon:before {
+    content: "\e905";
+}
+.icon-cookiepolicy:before {
+    content: "\e907";
+}
+.icon-edit:before {
+    content: "\e909";
+}
+.icon-facebook:before {
+    content: "\e90a";
+}
+.icon-faq:before {
+    content: "\e90b";
+}
+.icon-gift:before {
+    content: "\e90c";
+}
+.icon-howtocheck:before {
+    content: "\e90e";
+}
+.icon-infoprivacy:before {
+    content: "\e90f";
+}
+.icon-instagram:before {
+    content: "\e910";
+}
+.icon-legalnotes:before {
+    content: "\e911";
+}
+.icon-less:before {
+    content: "\e912";
+}
+.icon-menumobile:before {
+    content: "\e913";
+}
+.icon-more:before {
+    content: "\e914";
+}
+.icon-paymentmethod:before {
+    content: "\e917";
+}
+.icon-pinterest:before {
+    content: "\e918";
+}
+.icon-requestacallback:before {
+    content: "\e919";
+}
+.icon-returns:before {
+    content: "\e91a";
+}
+.icon-share:before {
+    content: "\e91d";
+}
+.icon-sign-out:before {
+    content: "\e91e";
+}
+.icon-twitter:before {
+    content: "\e920";
+}
+.icon-weibo:before {
+    content: "\e921";
+}
+.icon-youtube:before {
+    content: "\e923";
+}
+

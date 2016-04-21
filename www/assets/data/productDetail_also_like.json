@@ -1,0 +1,68 @@
+[
+	 {
+	  "image_src": "../../assets/img/productdetails/alsoLike1.jpg",
+	  "image_tab": "../../assets/img/productdetails/alsoLike1.jpg",
+	  "image_mob": "../../assets/img/productdetails/alsoLike1.jpg",
+	  "caption": "MISS VIV MINI SHOULDER BAG IN LEATHER",
+	  "price": "&euro; 1550,00",
+	  "image_mobx2" : "",
+	  "image_tabx2" : "",
+	  "image_srcx2" : "",
+	  "discount" : ""
+	},
+	{
+	  "image_src": "../../assets/img/productdetails/alsoLike2.jpg",
+	  "image_tab": "../../assets/img/productdetails/alsoLike2.jpg",
+	  "image_mob": "../../assets/img/productdetails/alsoLike2.jpg",
+	  "caption": "SOFT ENVELOPE CLUTCH IN LEATHER",
+	  "price": "&euro; 950,00",
+	  "image_mobx2" : "",
+	  "image_tabx2" : "",
+	  "image_srcx2" : "",
+	  "discount" : ""
+	},
+	{
+	  "image_src": "../../assets/img/productdetails/alsoLike3.jpg",
+	  "image_tab": "../../assets/img/productdetails/alsoLike3.jpg",
+	  "image_mob": "../../assets/img/productdetails/alsoLike3.jpg",
+	  "caption": "MEDIUM INES SHOPPING BAG IN LEATHER",
+	  "price": "&euro; 1750,00",
+	  "image_mobx2" : "",
+	  "image_tabx2" : "",
+	  "image_srcx2" : "",
+	  "discount": "&euro; 1250,00"
+	},
+	{
+	  "image_src": "../../assets/img/productdetails/alsoLike4.jpg",
+	  "image_tab": "../../assets/img/productdetails/alsoLike4.jpg",
+	  "image_mob": "../../assets/img/productdetails/alsoLike4.jpg",
+	  "caption": "MISS VIV SMALL T-SHIRT LOVE SHOULDER BAG IN LEATHER",
+	  "price": "&euro; 1550,00",
+	  "image_mobx2" : "",
+	  "image_tabx2" : "",
+	  "image_srcx2" : "",
+	  "discount" : ""
+	},
+	{
+	  "image_src": "../../assets/img/productdetails/alsoLike2.jpg",
+	  "image_tab": "../../assets/img/productdetails/alsoLike2.jpg",
+	  "image_mob": "../../assets/img/productdetails/alsoLike2.jpg",
+	  "caption": "SOFT ENVELOPE CLUTCH IN LEATHER",
+	  "price": "&euro; 950,00",
+	  "image_mobx2" : "",
+	  "image_tabx2" : "",
+	  "image_srcx2" : "",
+	  "discount" : ""
+	},
+	{
+	  "image_src": "../../assets/img/productdetails/alsoLike3.jpg",
+	  "image_tab": "../../assets/img/productdetails/alsoLike3.jpg",
+	  "image_mob": "../../assets/img/productdetails/alsoLike3.jpg",
+	  "caption": "MEDIUM INES SHOPPING BAG IN LEATHER",
+	  "price": "&euro; 1750,00",
+	  "image_mobx2" : "",
+	  "image_tabx2" : "",
+	  "image_srcx2" : "",
+	  "discount": "&euro;1250,00"
+	}
+  ]
