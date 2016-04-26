@@ -1043,9 +1043,9 @@ RogerVivier.components.parallaxgridlayout = function() {
     "use strict";
     var module = {}, $parallaxContainer = $(".parallax-container"), $switchVideoCarousel = $parallaxContainer.find(".switch-video-carousel"), $videoGridContainer = $(".module-video .video-grid-container"), $videoCarousel = $(".module-video .carousel"), $playVideoButton = $(".play-video"), $items = $videoGridContainer.find(".video-article"), $heroItems = $items.filter(".hero-video"), $notHeroItems = $items.not(".hero-video"), $notHeroFirstItem = $notHeroItems.first(), $viewVideoButton = $notHeroItems.find("img, .article-caption");
     module.initGrid = function($containerSelector) {
-        var windowWidth = $(window).width(), tabletSize = 1024, colSpanAttr = "data-ss-colspan", desktopPaddingBottom = Math.floor($notHeroFirstItem.outerWidth(true) * 1.24), mobilePaddingBottom = Math.floor($notHeroFirstItem.outerHeight(true)), options = {
+        var windowWidth = $(window).width(), mobileSize = 768, colSpanAttr = "data-ss-colspan", desktopPaddingBottom = Math.floor($notHeroFirstItem.outerWidth(true) * 1.24), mobilePaddingBottom = Math.floor($notHeroFirstItem.outerHeight(true)), options = {
             align: "left",
-            minColumns: 3,
+            minColumns: 2,
             maxColumns: 4,
             gutterX: 0,
             gutterY: 0,
@@ -1056,10 +1056,16 @@ RogerVivier.components.parallaxgridlayout = function() {
             columns: 4
         };
         $heroItems.attr(colSpanAttr, "2");
+        $notHeroItems.attr(colSpanAttr, "1");
+        if (windowWidth <= mobileSize) {
+            options.columns = 2;
+            $heroItems.attr(colSpanAttr, "2");
+            $notHeroItems.attr(colSpanAttr, "1");
+        }
         $containerSelector.shapeshift(options);
     };
     module.loadVideo = function($thumbButton) {
-        var $itemParent = $thumbButton.closest(".grid-item"), $videoParent = $(".hero-video"), $thumbsCarousel = $(".video-carousel-wrapper .carousel"), $videoWrapper = $("#video-wrapper-0"), urlToLoad = $itemParent.find(".article-caption").data("video-url"), srcToLoad = $itemParent.find("img").attr("src"), captionToLoad = $itemParent.find(".article-caption").text();
+        var $itemParent = $thumbButton.closest(".grid-item"), $videoParent = $(".hero-video"), $thumbsCarousel = $(".video-carousel-wrapper .carousel"), $videoWrapper = $("#video-wrapper-0"), urlToLoad = $itemParent.find(".article-caption").data("video-url"), srcToLoad = $itemParent.find("img").attr("src"), captionToLoad = $itemParent.find(".article-caption").text(), topAutoScroll = $(".video-carousel-wrapper").length ? $(".video-carousel-wrapper").position().top : 0, windowWidth = $(window).width(), mobileSize = 768, skrollrAutoScroll = "translate(0px, -" + topAutoScroll + "px)";
         if ($(".jwplayer").length) {
             jwplayer().stop();
         }
@@ -1075,6 +1081,15 @@ RogerVivier.components.parallaxgridlayout = function() {
             $videoParent.finish().find("img").fadeTo(400, 1);
             $videoParent.find(".article-caption span").text(captionToLoad).fadeTo(400, 1);
         }, 220);
+        if (windowWidth <= mobileSize && topAutoScroll) {
+            if (navigator.appVersion.indexOf("Mobile") >= 0) {
+                $("#skrollr-body").css("transform", skrollrAutoScroll);
+            } else {
+                $("html, body").animate({
+                    scrollTop: topAutoScroll
+                }, 500);
+            }
+        }
     };
     module.switchCarousel = function($button) {
         var $carousel = $button.closest(".carousel"), currentSlide = $carousel.slick("slickCurrentSlide"), switchToSlide = Math.abs(currentSlide - 1);
@@ -1090,6 +1105,7 @@ RogerVivier.components.parallaxgridlayout = function() {
         }, 350);
     };
     module.bindEvents = function() {
+        var $videoCarouselDots = $(".video-carousel-wrapper .slick-dots > li");
         $switchVideoCarousel.on("click", function() {
             module.switchCarousel($(this));
         });
@@ -1099,10 +1115,15 @@ RogerVivier.components.parallaxgridlayout = function() {
         $viewVideoButton.on("click", function() {
             module.loadVideo($(this));
         });
+        $videoCarouselDots.on("click", function() {
+            setTimeout(function() {
+                $videoCarousel.slick("setPosition");
+            }, 300);
+        });
     };
     module.skrollrInit = function() {
         $(window).load(function() {
-            if ($("#skrollr-body").length) {
+            if ($(".parallax-container").length) {
                 var s = skrollr.init({
                     easing: {
                         wtf: Math.random,
