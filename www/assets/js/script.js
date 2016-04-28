@@ -248,7 +248,7 @@ RogerVivier.components.video = function() {
         $(".video-wrapper").eq(i).attr("id", "video-wrapper-" + i);
     }
     $videoHandler.on("click", function(ev) {
-        var $self = $(this), dataUrl = $self.data("customurl"), dataType = $self.data("typevideo"), $videoWrapper = $self.closest(".video-article").find('div[id^="video-wrapper"]'), videoWrapperID = $videoWrapper.attr("id");
+        var $self = $(this), $videoPreview = $self.siblings("img"), dataUrl = $self.data("customurl"), dataType = $self.data("typevideo"), $videoWrapper = $self.closest(".video-article").find('div[id^="video-wrapper"]'), videoWrapperID = $videoWrapper.attr("id");
         if (!$.isEmptyObject(dataUrl)) {
             var playerInstance = jwplayer(videoWrapperID);
             playerInstance.setup({
@@ -258,7 +258,9 @@ RogerVivier.components.video = function() {
                 height: "100%",
                 autostart: true
             });
-            $videoWrapper.fadeIn(600);
+            $videoWrapper.fadeIn(600, function() {
+                $videoPreview.fadeTo(500, .01);
+            });
         }
     });
     return module;

@@ -28,14 +28,15 @@
                         </head>
                         <body id="skrollr-body">
 
-                            <div id="preloader" class="preloader">
+                            <div id="preloader" class="preloader" style="position: fixed; left: 0; top: 0; z-index: 99999; background-color: #FFF; height: 100%; width: 100%;">
 	<div class="preload-message-wrapper">
-		<div class="preload-message">
+		<div class="preload-message" >
        		<div class="icon-rogervivier-paris logo-active"></div>
        		<div class="icon-rogervivier-paris"></div>
        </div>
 	</div>
 </div>
+
 
                             <div class="page-container"></div>
 <div class="cart-dark-container"></div>
@@ -515,71 +516,7 @@
 
 
 
-                            <style type="text/css">
-    @keyframes sway { 
-        15% { transform: rotateZ(-15deg) rotateX(35deg);  }
-        30% { transform: rotateZ(20deg) rotateX(40deg); animation-timing-function: ease-in-out; }
-        60% { transform: rotateZ(-20deg) rotateX(35deg); animation-timing-function: ease-in-out;  }
-        100% { transform: rotateZ(0deg) rotateX(38deg); animation-timing-function: cubic-bezier(0.290, 0.000, 0.290, 0.035);  }
-    }
-    @keyframes fall { 
-        15% { -webkit-filter: drop-shadow(0px 200px 40px rgba(0,0,0,0.4)); }
-        60% { -webkit-filter: drop-shadow(0px 80px 40px rgba(0,0,0,0.5)); }
-        100% { margin-top: 200px; 
-            -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.6)); }
-    }
-    @keyframes sway2 { 
-        20% { transform: rotateY(225deg) rotateZ(-30deg); }
-        40% { transform: rotateY(145deg) rotateZ(-50deg) ; }
-        60% { transform: rotateY(225deg) rotateZ(-40deg) ; }
-        90% { transform: rotateY(180deg) rotateZ(-60deg) ; }
-        100% { transform: rotateY(200deg) rotateZ(-62deg) ; animation-timing-function: cubic-bezier(0.290, 0.000, 0.290, 0.035);  }
-    }
-    @keyframes fall2 { 
-        20% { -webkit-filter: drop-shadow(-200px 200px 40px rgba(0,0,0,0.4)); }
-        60% { margin-top: 120px -webkit-filter: drop-shadow(-80px 80px 30px rgba(0,0,0,0.5)); }
-        90% { margin-top: 180px; -webkit-filter: drop-shadow(-15px 15px 15px rgba(0,0,0,0.6)); }
-        100% { margin-top: 200px; -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.6)); animation-timing-function: cubic-bezier(0.290, 0.000, 0.290, 0.035); }
-    }
-    .feather {
-        margin-top: -12%;
-    }
-    .feather  img { 
-      position: absolute;
-      /*width: 12% !important;*/
-      transform-origin: 0px -0px 0px;
-    }
-    .feather a,
-    .feather2 a {
-        display: inline-block;
-        position: relative;
-        width: 100%;
-    }
-    .feather2  img {
-        position: absolute;
-        top: 45%;
-        /*width: 8% !important;*/
-        transform-origin: 30% 10% 0px;
-    }
-    .start-animation img {
-        animation-name: fall, sway;
-        animation-duration: 8.2s, 8s;
-        animation-fill-mode: both;
-        animation-delay: 0.4s, 0.4s;
-        animation-timing-function: linear, ease-in-out;
-    }
-    .start-animation2 img {
-        animation-name: fall2, sway2;
-        animation-duration: 7.9s, 8s;
-        animation-fill-mode: both;
-        animation-delay: 0.5s, 0.5s;
-        animation-timing-function: linear, ease-in-out;
-    }
-</style>
-
-
-
-<div class="breadcrumb">
+                            <div class="breadcrumb">
     <div class="container">
         <div class="col-md-19 col-md-offset-1 col-sm-offset-1 col-sm-22 col-xs-24">
             <ul>
