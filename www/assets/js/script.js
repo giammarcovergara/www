@@ -980,8 +980,8 @@ RogerVivier.components.navgridlayout = function() {
                 $(".section-nav .nav-down").removeClass("hidden");
             }
         }, getNavTop = function(offset) {
-            var checkPage = $(".main-title-caption") ? true : false, mobileTitleVis = $(".main-title-caption.mobile").is(":visible"), $titleCaption = checkPage && mobileTitleVis ? $(".main-title-caption.mobile") : $(".main-title-caption.desktop"), headerHeight = $("header").outerHeight(), titleTop = $titleCaption.position() ? $titleCaption.position().top : 0, titleHeight = $titleCaption.outerHeight(true);
-            return titleTop + titleHeight + headerHeight - offset;
+            var checkPage = $(".main-title-caption") ? true : false, mobileTitleVis = $(".main-title-caption.mobile").is(":visible"), $titleCaption = checkPage && mobileTitleVis ? $(".main-title-caption.mobile") : $(".main-title-caption.desktop"), headerHeight = $("header").outerHeight(), breadcrumbsHeight = $(".breadcrumb").outerHeight(), titleTop = $titleCaption.position() ? $titleCaption.position().top : 0, titleHeight = $titleCaption.outerHeight(true);
+            return titleTop + titleHeight + headerHeight + breadcrumbsHeight - offset;
         }, setNavPadding = function(offset) {
             var checkPage = $(".main-title-caption") ? true : false, mobileTitleVis = $(".main-title-caption.mobile").is(":visible"), $titleCaption = checkPage && mobileTitleVis ? $(".main-title-caption.mobile") : $(".main-title-caption.desktop"), titleTop = $titleCaption.position() ? $titleCaption.position().top : 0, titleHeight = $titleCaption.outerHeight(true), navPadding = titleTop + titleHeight + 10 - offset;
             $nav.css("padding-top", navPadding);
@@ -1134,6 +1134,7 @@ RogerVivier.components.parallaxgridlayout = function() {
                         }
                     }
                 });
+                module.setHeight();
             }
         });
     };
@@ -1151,6 +1152,11 @@ RogerVivier.components.parallaxgridlayout = function() {
                 backgroundPosition: coords
             });
         });
+    };
+    module.setHeight = function() {
+        var evt = window.document.createEvent("UIEvents");
+        evt.initUIEvent("resize", true, false, window, 0);
+        window.dispatchEvent(evt);
     };
     module.init = function() {
         module.initGrid($videoGridContainer);
@@ -1519,6 +1525,11 @@ RogerVivier.productDetails = function() {
                         dots: true
                     }
                 } ]
+            });
+            $carouselImage.on("swipe", function(event, slick, direction) {
+                var ind = $(this).find(".slick-current").index();
+                $carouselThumb.find(".slick-slide").removeClass("slick-active slick-current");
+                $carouselThumb.find(".slick-slide").eq(ind).addClass("slick-active slick-current");
             });
         }
         if (RogerVivier.utility.isElementExist($carouselThumb.find("img"))) {
