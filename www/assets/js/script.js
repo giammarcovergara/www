@@ -1067,7 +1067,7 @@ RogerVivier.components.parallaxgridlayout = function() {
         $containerSelector.shapeshift(options);
     };
     module.loadVideo = function($thumbButton) {
-        var $itemParent = $thumbButton.closest(".grid-item"), $videoParent = $(".hero-video"), $thumbsCarousel = $(".video-carousel-wrapper .carousel"), $videoWrapper = $("#video-wrapper-0"), urlToLoad = $itemParent.find(".article-caption").data("video-url"), srcToLoad = $itemParent.find("img").attr("src"), captionToLoad = $itemParent.find(".article-caption").text(), topAutoScroll = $(".video-carousel-wrapper").length ? $(".video-carousel-wrapper").position().top : 0, windowWidth = $(window).width(), mobileSize = 768, skrollrAutoScroll = "translate(0px, -" + topAutoScroll + "px)";
+        var $itemParent = $thumbButton.closest(".grid-item"), $videoParent = $(".hero-video"), $thumbsCarousel = $(".video-carousel-wrapper .carousel"), $videoWrapper = $("#video-wrapper-0"), urlToLoad = $itemParent.find(".article-caption").data("video-url"), srcToLoad = $itemParent.find("img").attr("src"), captionToLoad = $itemParent.find(".article-caption").text(), topAutoScroll = $(".video-carousel-wrapper").length ? $(".video-carousel-wrapper").position().top : 0, windowWidth = $(window).width(), scrollbarWidth = window.innerWidth - document.documentElement.clientWidth, mobileSize = 768, skrollrAutoScroll = "translate(0px, -" + topAutoScroll + "px)";
         if ($(".jwplayer").length) {
             jwplayer().stop();
         }
@@ -1166,6 +1166,10 @@ RogerVivier.components.parallaxgridlayout = function() {
             setTimeout(function() {
                 module.initGrid($videoGridContainer);
                 $videoCarousel.slick("setPosition");
+                setTimeout(function() {
+                    module.initGrid($videoGridContainer);
+                    $videoCarousel.slick("setPosition");
+                }, 200);
             }, 250);
         });
         $(window).resize(function() {
@@ -1173,7 +1177,10 @@ RogerVivier.components.parallaxgridlayout = function() {
             this.resizeTO = setTimeout(function() {
                 $(this).trigger("resizeEnd");
                 module.skrollrInit();
-            }, 250);
+                setTimeout(function() {
+                    module.skrollrInit();
+                }, 200);
+            }, 500);
         });
         $(window).scroll(function() {
             var scrollVal = $(window).scrollTop();
