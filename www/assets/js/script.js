@@ -1124,19 +1124,16 @@ RogerVivier.components.parallaxgridlayout = function() {
         });
     };
     module.skrollrInit = function() {
-        $(window).load(function() {
-            if ($(".parallax-container").length) {
-                var s = skrollr.init({
-                    easing: {
-                        wtf: Math.random,
-                        inverted: function(p) {
-                            return 1 - p;
-                        }
+        if ($(".parallax-container").length) {
+            var s = skrollr.init({
+                easing: {
+                    wtf: Math.random,
+                    inverted: function(p) {
+                        return 1 - p;
                     }
-                });
-                module.setHeight();
-            }
-        });
+                }
+            });
+        }
     };
     module.startAnimation = function(scroll) {
         var windowHeight = $(window).height(), $animatedObj = $(".startAnimationCall"), $module = $animatedObj.closest(".parallax-section"), startTop = $module.length ? $module.position().top - windowHeight / 2 : 0;
