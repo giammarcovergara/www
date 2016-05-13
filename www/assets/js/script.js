@@ -1999,9 +1999,31 @@ if ($(".map-container").length != 0) {
             featureType: "all",
             elementType: "all",
             stylers: [ {
-                hue: "#f9f0f2"
-            }, {
-                saturation: -80
+                color: "#f6e9eb"
+            } ]
+        }, {
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [ {
+                color: "#e8c8ce"
+            } ]
+        }, {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [ {
+                color: "#efd8dc"
+            } ]
+        }, {
+            featureType: "administrative",
+            elementType: "labels.text.fill",
+            stylers: [ {
+                color: "#8a515a"
+            } ]
+        }, {
+            featureType: "road",
+            elementType: "labels",
+            stylers: [ {
+                visibility: "off"
             } ]
         } ];
         var options = {
